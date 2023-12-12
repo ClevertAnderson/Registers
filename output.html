@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <title>Output Page</title>
+</head>
+<body>
+
+
+<div class="card text-left mx-auto" style="width: 50%; font-style: bold;">
+    <div class="card-header">
+        Welcome Card
+    </div>
+    <div class="card-body" style="text-align: center;">
+        <p>You have successfully registered.</p>
+        <p id="outputMessage" style="font-size: 40px; "></p>
+    </div>
+</div>
+
+<script>
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const name = urlParams.get('name');
+    const section = urlParams.get('section');
+    document.getElementById('outputMessage').innerText = name + ' | ' + section;
+
+</script>
+
+</body>
+</html>
